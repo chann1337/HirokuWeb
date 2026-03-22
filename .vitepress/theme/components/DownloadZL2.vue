@@ -915,6 +915,27 @@ onMounted(() => {
         </div>
       </div>
       
+      <!-- 云盘下载 -->
+      <div v-if="versionJsonData?.default_cloud_drive" class="cloud-drive-section">
+        <div class="cloud-drive-card">
+          <div class="cloud-drive-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          </div>
+          <div class="cloud-drive-info">
+            <h4>网盘下载</h4>
+            <p>国内用户推荐，下载更稳定</p>
+          </div>
+          <a 
+            :href="versionJsonData.default_cloud_drive.link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="cloud-drive-btn"
+          >
+            访问网盘
+          </a>
+        </div>
+      </div>
+      
       <!-- 下载文件列表 -->
       <div class="download-section">
         <h3>下载文件</h3>
@@ -1470,6 +1491,80 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+}
+
+/* 云盘下载 */
+.cloud-drive-section {
+  margin-bottom: 24px;
+}
+
+.cloud-drive-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .cloud-drive-card {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+.cloud-drive-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.cloud-drive-info {
+  flex: 1;
+}
+
+.cloud-drive-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.cloud-drive-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+}
+
+.cloud-drive-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cloud-drive-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
 }
 
 /* 发布说明 */

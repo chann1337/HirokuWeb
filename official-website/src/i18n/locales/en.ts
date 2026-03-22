@@ -80,6 +80,9 @@ export default {
     multiSource: "Multi-source Acceleration",
     communityPowered: "Open Source Community",
     downloads: "Downloads",
+    cloudDrive: "Cloud Drive Download",
+    cloudDriveDesc: "Recommended for users in China",
+    cloudDriveBtn: "Open Cloud Drive",
     devices: {
       all: "All Files",
       allDesc: "Display all downloadable assets",

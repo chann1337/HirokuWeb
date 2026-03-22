@@ -80,6 +80,9 @@ export default {
     multiSource: "多源加速，极速下载",
     communityPowered: "开源社区，共同维护",
     downloads: "下载",
+    cloudDrive: "网盘下载",
+    cloudDriveDesc: "国内用户推荐，下载更稳定",
+    cloudDriveBtn: "访问网盘",
     devices: {
       all: "全部文件",
       allDesc: "显示所有下载文件",

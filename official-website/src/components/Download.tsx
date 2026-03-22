@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Download, Smartphone, Terminal, ShieldCheck, Zap, Globe, ChevronDown, Check, AlertTriangle, ExternalLink, Info } from 'lucide-react';
+import { Download, Smartphone, Terminal, ShieldCheck, Zap, Globe, ChevronDown, Check, AlertTriangle, ExternalLink, Info, Cloud } from 'lucide-react';
 import { useLatestRelease, type Asset } from '../hooks/useLatestRelease';
 import { marked } from 'marked';
 import { clsx, type ClassValue } from 'clsx';
@@ -26,6 +26,7 @@ const DownloadSection = () => {
     mirrorData, 
     dynamicDeviceTypes, 
     localizedBody,
+    cloudDrive,
     downloadSources 
   } = useLatestRelease(activeProject, i18n.language);
 
@@ -426,6 +427,31 @@ const DownloadSection = () => {
                     </AnimatePresence>
                   </div>
                 </div>
+
+                {/* Cloud Drive Link */}
+                {cloudDrive && (
+                  <div className="mb-6 p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-blue-500/20 text-blue-500 rounded-xl flex items-center justify-center">
+                          <Cloud size={20} />
+                        </div>
+                        <div>
+                          <p className="text-sm font-bold text-[var(--text-1)]">{t('download.cloudDrive')}</p>
+                          <p className="text-xs text-[var(--text-2)]">{t('download.cloudDriveDesc')}</p>
+                        </div>
+                      </div>
+                      <a 
+                        href={cloudDrive.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-xl text-sm font-medium transition-colors whitespace-nowrap"
+                      >
+                        {t('download.cloudDriveBtn')} <ExternalLink size={14} />
+                      </a>
+                    </div>
+                  </div>
+                )}
 
                 {/* Assets List */}
                 <div className="space-y-3">

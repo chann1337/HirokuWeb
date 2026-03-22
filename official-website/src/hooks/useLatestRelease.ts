@@ -344,6 +344,11 @@ export const useLatestRelease = (project: 'zl1' | 'zl2', currentLang: string) =>
     return result;
   }, [release, t]);
 
+  const cloudDrive = useMemo(() => {
+    if (!versionJsonData || project === 'zl1') return null;
+    return versionJsonData.default_cloud_drive || null;
+  }, [versionJsonData, project]);
+
   return {
     release,
     isReleaseLoading,
@@ -356,6 +361,7 @@ export const useLatestRelease = (project: 'zl1' | 'zl2', currentLang: string) =>
     mirrorData,
     dynamicDeviceTypes,
     localizedBody,
+    cloudDrive,
     downloadSources: DOWNLOAD_SOURCES
   };
 };
