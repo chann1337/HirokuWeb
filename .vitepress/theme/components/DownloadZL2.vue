@@ -1500,22 +1500,13 @@ onMounted(() => {
 
 .cloud-drive-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
   padding: 20px;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 16px;
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .cloud-drive-card {
-    flex-direction: row;
-    text-align: left;
-    justify-content: space-between;
-  }
 }
 
 .cloud-drive-icon {
