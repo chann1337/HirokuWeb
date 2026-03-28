@@ -1,17 +1,28 @@
-import { Github, MessageSquare, Coffee, Heart, Globe, ShieldCheck, Mail } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Github, MessageSquare, Coffee, Heart, Globe, ShieldCheck, Mail, GitBranch } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import type { BuildInfo } from '../types/blog';
 
 const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+  const [buildInfo, setBuildInfo] = useState<BuildInfo | null>(null);
+
+  useEffect(() => {
+    fetch('/build-info.json')
+      .then((res) => res.json())
+      .then(setBuildInfo)
+      .catch(() => {});
+  }, []);
 
   const footerLinks = [
     {
       title: t('footer.projects'),
       links: [
-        { name: t('footer.projects'), path: "/" },
+        { name: t('nav.home'), path: "/" },
         { name: t('common.downloadCenter'), path: "/download" },
+        { name: t('nav.blog'), path: "/blog" },
         { name: t('common.docs'), path: "https://www.zalithlauncher.cn/docs/projects/zl2", external: true },
         { name: t('footer.githubOrg'), path: "https://github.com/ZalithLauncher", external: true },
       ]
@@ -34,11 +45,15 @@ const Footer = () => {
     }
   ];
 
+  const formatBuildTime = (isoString: string) => {
+    const date = new Date(isoString);
+    return date.toLocaleString();
+  };
+
   return (
     <footer className="pt-20 pb-10 border-t border-[var(--divider)]/20 bg-[var(--bg)] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-          {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3">
               <img src="/zl_icon.webp" alt="Logo" className="w-10 h-10 rounded-xl shadow-lg" />
@@ -63,7 +78,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Columns */}
           {footerLinks.map((group) => (
             <div key={group.title} className="space-y-6">
               <h4 className="font-bold text-[var(--text-1)] uppercase tracking-wider text-sm">{group.title}</h4>
@@ -88,7 +102,6 @@ const Footer = () => {
           ))}
         </div>
         
-        {/* Bottom Bar */}
         <div className="pt-10 border-t border-[var(--divider)]/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-sm text-[var(--text-2)] text-center md:text-left">
@@ -103,15 +116,39 @@ const Footer = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-6 text-xs text-[var(--text-2)]">
-              <div className="flex items-center gap-1">
-                <Globe size={14} className="text-[var(--brand)]" />
-                <span>{t('footer.globalNodes')}</span>
+            <div className="flex flex-col items-center md:items-end gap-3">
+              <div className="flex items-center gap-6 text-xs text-[var(--text-2)]">
+                <div className="flex items-center gap-1">
+                  <Globe size={14} className="text-[var(--brand)]" />
+                  <span>{t('footer.globalNodes')}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Mail size={14} className="text-[var(--brand)]" />
+                  <span>{t('footer.poweredBy')}</span>
+                </div>
               </div>
-              <div className="flex items-center gap-1">
-                <Mail size={14} className="text-[var(--brand)]" />
-                <span>{t('footer.poweredBy')}</span>
-              </div>
+              
+              {buildInfo && (
+                <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-3 gap-y-1 text-xs text-[var(--text-2)] opacity-60">
+                  <span className="flex items-center gap-1">
+                    {t('footer.builtOn')}: {formatBuildTime(buildInfo.buildTime)}
+                  </span>
+                  <span className="hidden sm:inline">|</span>
+                  <a 
+                    href={`${buildInfo.repoUrl}/commit/${buildInfo.commitHash}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-1 hover:text-[var(--brand)] hover:opacity-100 transition-all"
+                  >
+                    {t('footer.commit')}: {buildInfo.commitHash}
+                  </a>
+                  <span className="hidden sm:inline">|</span>
+                  <span className="flex items-center gap-1">
+                    <GitBranch size={10} />
+                    {buildInfo.branch}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </div>

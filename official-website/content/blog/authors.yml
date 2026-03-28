@@ -1,0 +1,15 @@
+movtery:
+  name: Movtery
+  title: Lead Developer
+  url: https://github.com/movtery
+  image_url: /image/MovTery.png
+  socials:
+    github: movtery
+
+leemwood:
+  name: 柠枺
+  title: Contributor
+  url: https://github.com/leemwood
+  image_url: https://wiki.lemwood.cn/img/logo.png
+  socials:
+    github: leemwood

@@ -4,6 +4,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import DownloadPage from './pages/DownloadPage';
 import PrivacyPage from './pages/PrivacyPage';
+import BlogListPage from './pages/BlogListPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 const AppContent = () => {
   const location = useLocation();
@@ -17,6 +19,8 @@ const AppContent = () => {
           <Route path="/" element={<Home />} />
           <Route path="/download" element={<DownloadPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/blog" element={<BlogListPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
         </Routes>
       </main>
       {!isHomePage && <Footer />}

@@ -30,6 +30,7 @@ const Navbar = () => {
     { name: t('nav.home'), path: '/' },
     { name: t('nav.features'), path: '/#features' },
     { name: t('nav.download'), path: '/download' },
+    { name: t('nav.blog'), path: '/blog' },
     { name: t('nav.docs'), path: 'https://www.zalithlauncher.cn/docs/projects/zl2', external: true },
   ];
 

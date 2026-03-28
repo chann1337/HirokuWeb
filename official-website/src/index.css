@@ -123,6 +123,41 @@
   .prose-custom blockquote {
     @apply border-l-4 border-[var(--brand)] pl-4 italic my-6 text-[var(--text-2)] bg-[var(--bg-alt)]/50 py-2 rounded-r-lg;
   }
+
+  .prose-custom pre {
+    @apply bg-[var(--bg-alt)] rounded-lg p-4 overflow-x-auto my-6;
+  }
+
+  .prose-custom pre code {
+    @apply bg-transparent p-0 text-sm;
+  }
+
+  .prose-custom table {
+    @apply w-full border-collapse my-6;
+  }
+
+  .prose-custom th,
+  .prose-custom td {
+    @apply border border-[var(--divider)]/50 px-4 py-2 text-left;
+  }
+
+  .prose-custom th {
+    @apply bg-[var(--bg-alt)] font-bold text-[var(--text-1)];
+  }
+
+  .prose-custom img {
+    @apply rounded-lg max-w-full h-auto my-6;
+  }
+
+  .prose-custom hr {
+    @apply border-[var(--divider)]/30 my-8;
+  }
+
+  .prose-custom ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* Custom Glow Effects */
