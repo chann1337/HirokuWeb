@@ -10,16 +10,11 @@ const blogIndex: BlogIndex = blogIndexData;
 
 const BlogListPage = () => {
   const { t, i18n } = useTranslation();
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredPosts = useMemo(() => {
     let posts = blogIndex.posts.filter((post) => post.lang === i18n.language);
-    
-    if (selectedCategory) {
-      posts = posts.filter((post) => post.category === selectedCategory);
-    }
     
     if (selectedTag) {
       posts = posts.filter((post) => post.tags.includes(selectedTag));
@@ -36,9 +31,8 @@ const BlogListPage = () => {
     }
     
     return posts;
-  }, [i18n.language, selectedCategory, selectedTag, searchQuery]);
+  }, [i18n.language, selectedTag, searchQuery]);
 
-  const categories = blogIndex.categories;
   const tags = blogIndex.tags;
 
   return (
