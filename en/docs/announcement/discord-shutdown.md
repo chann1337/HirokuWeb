@@ -24,6 +24,6 @@ Thank you for your understanding and support.
 
 - [GitHub Announcement](https://github.com/ZalithLauncher/Zalith-Info/blob/main/launcher_notice.json)
 
-## 中文版本
+## Chinese Version
 
-如需查看中文版本的公告，请参阅 [中文公告页面](/zh/announcement/discord-shutdown)。
+For the Chinese version of this announcement, please see [Chinese Announcement Page](/docs/announcement/discord-shutdown).
