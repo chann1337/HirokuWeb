@@ -53,6 +53,7 @@ export default <DefaultTheme.Config> {
                 { text: 'Zalith Launcher 2', link: '/en/zl2-download' }
             ]
         },
+        { text: 'Announcement', link: '/en/announcement/discord-shutdown' },
         { 
             text: 'More',
             items: [

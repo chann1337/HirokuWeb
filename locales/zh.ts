@@ -50,6 +50,7 @@ export default <DefaultTheme.Config> {
                 { text: 'Zalith Launcher 2', link: '/zl2-download' }
             ]
         },
+        { text: '公告', link: '/announcement/discord-shutdown' },
         { text: '更多', 
             items: [
                 { text: '启动器文档', link: '/docs/projects/zl2' },
@@ -58,9 +59,9 @@ export default <DefaultTheme.Config> {
         },
         { text: '切换网络节点', 
             items: [
-                { text: '[AL]阿里云节点', link: 'https://zalithlauncher.cn' },
-                { text: '[CF]Cloudflare节点', link: 'https://cf.zalithlauncher.cn' },
-                { text: '[EO]edgeone节点-推荐', link: 'https://www.zalithlauncher.cn' }
+                { text: '[AL] 阿里云节点', link: 'https://zalithlauncher.cn' },
+                { text: '[CF]Cloudflare 节点', link: 'https://cf.zalithlauncher.cn' },
+                { text: '[EO]edgeone 节点 - 推荐', link: 'https://www.zalithlauncher.cn' }
             ]
         }
     ],
