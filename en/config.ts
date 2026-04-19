@@ -3,7 +3,7 @@ import en from '../locales/en';
 
 export default defineAdditionalConfig({
   lang: 'en-US',
-  description: "HirokuLauncher is a Minecraft launcher based on PojavLauncher, enabling Minecraft: Java Edition on Android devices.",
+  description: "HirokuLauncher is a modern Minecraft: Java Edition launcher for Android.",
 
   themeConfig: en
 });

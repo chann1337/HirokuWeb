@@ -2,11 +2,10 @@
 sidebar: false
 ---
 
-# 下载 HirokuLauncher 2
+# Скачать HirokuLauncher
 
-您可以在本页面下载 HirokuLauncher 2 的最新版本。我们提供多个下载源以确保下载速度，包括 GitHub 官方源、fishcpy 镜像源、哈哈源以及柠枺镜像。
+На этой странице можно скачать актуальную версию HirokuLauncher для Android.
+Доступны несколько источников загрузки и выбор подходящей архитектуры устройства.
 
-支持 Android 平台的各种架构（arm64-v8a, armeabi-v7a, x86_64, x86）。
-
-<DownloadZL2/>
+<Download/>
 
