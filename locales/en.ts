@@ -34,10 +34,7 @@ export default <DefaultTheme.Config> {
     darkModeSwitchLabel: 'Appearance',
     returnToTopLabel: 'Back to top',
     sidebarMenuLabel: 'Menu',
-    editLink: {
-        pattern: 'https://github.com/zalithlauncher/zalithwebsite/edit/main/:path',
-        text: 'Edit this page on GitHub'
-    },
+    editLink: false,
     lastUpdated: {
         text: 'Updated at',
         formatOptions: {
@@ -53,19 +50,11 @@ export default <DefaultTheme.Config> {
                 { text: 'HirokuLauncher 2', link: '/en/zl2-download' }
             ]
         },
-        { text: 'Announcement', link: '/en/docs/announcement/discord-shutdown' },
-        { 
-            text: 'More',
+        {
+            text: 'Documentation',
             items: [
                 { text: 'Launcher Documentation', link: '/en/docs/projects/zl2' },
                 { text: 'About this site', link: '/en/docs/about/about' }
-            ]
-        },
-        { text: 'Switch Network Node', 
-            items: [
-                { text: '[AL]Aliyun Node', link: 'https://zalithlauncher.cn' },
-                { text: '[CF]Cloudflare Node', link: 'https://cf.zalithlauncher.cn' },  
-                { text: '[EO]edgeone Node-Recommended', link: 'https://www.zalithlauncher.cn' }
             ]
         }
     ],
@@ -109,15 +98,7 @@ export default <DefaultTheme.Config> {
         }
     ],
     outlineTitle: 'On this page',
-    domainWarning: {
-        title: 'Access Notice',
-        content: 'You are visiting from <strong>{{ currentHostname }}</strong>. For better speed and stability, we recommend opening the main HirokuLauncher site:',
-        button: 'I understand',
-        officialDomain: 'ann1337.github.io'
-    },
-
     footer: {
-        message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">新ICP备2024015133号-4</a>',
         copyright: 'Copyright © 2026 HirokuLauncher, All rights reserved. | MIT License'
     },
 

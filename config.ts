@@ -1,9 +1,9 @@
 import { defineAdditionalConfig } from 'vitepress';
-import zh from './locales/zh';
+import ru from './locales/ru';
 
 export default defineAdditionalConfig({
-  lang: 'zh-Hans',
-  description: "HirokuLauncher 是一款面向 Android 的 Minecraft Java Edition 启动器，提供更现代的界面与更稳定的体验。",
-
-  themeConfig: zh
+  lang: 'ru-RU',
+  title: 'HirokuLauncher',
+  description: "HirokuLauncher — современный лаунчер Minecraft: Java Edition для Android с удобным интерфейсом и стабильной работой.",
+  themeConfig: ru
 });

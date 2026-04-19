@@ -1,28 +1,14 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import Download from './components/Download.vue'
 import DownloadZL2 from './components/DownloadZL2.vue'
 import ApngPlayer from './components/ApngPlayer.vue'
-import AnnouncementBanner from './components/AnnouncementBanner.vue'
 import './style.css'
 import './style/blur.css'
 
-import DomainWarningPopup from './components/DomainWarningPopup.vue'
-
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      'layout-top': () => [
-        h(AnnouncementBanner)
-      ],
-      'layout-bottom': () => [
-        h(DomainWarningPopup)
-      ],
-    })
-  },
   enhanceApp({ app, router, siteData }) {
     app.component('Download', Download)
     app.component('DownloadZL2', DownloadZL2)
