@@ -44,30 +44,18 @@ export default <DefaultTheme.Config> {
     },
     nav: [
         { text: 'Home', link: '/en/' },
-        { text: 'Download',
-            items: [
-                { text: 'HirokuLauncher 1', link: '/en/download' },
-                { text: 'HirokuLauncher 2', link: '/en/zl2-download' }
-            ]
-        },
-        {
-            text: 'Documentation',
-            items: [
-                { text: 'Launcher Documentation', link: '/en/docs/projects/zl2' },
-                { text: 'About this site', link: '/en/docs/about/about' }
-            ]
-        }
+        { text: 'Download', link: '/en/download' },
+        { text: 'Documentation', link: '/en/docs/about/about' }
     ],
     sidebar: [
         {
-            text: 'Projects',
+            text: 'Project',
             items: [
-                { text: 'HirokuLauncher 1', link: '/en/docs/projects/zl1' },
-                { text: 'HirokuLauncher 2', link: '/en/docs/projects/zl2' }
+                { text: 'About HirokuLauncher', link: '/en/docs/about/about' }
             ]
         },
         {
-            text: 'ZL2 Launcher Help',
+            text: 'Launcher Help',
             items: [
                 { text: 'Download and Install Game', link: '/en/docs/help/download_game' },
                 { text: 'ModLoader', link: '/en/docs/help/modloader' },
@@ -78,7 +66,7 @@ export default <DefaultTheme.Config> {
             ]
         },
         {
-            text: 'ZL2 Control Layout Help',
+            text: 'Control Layout Help',
             collapsed: true,
             items: [
                 { text: 'Overview', link: '/en/docs/control2_help/overview' },

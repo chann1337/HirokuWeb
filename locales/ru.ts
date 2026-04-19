@@ -41,55 +41,13 @@ export default <DefaultTheme.Config>{
   },
   nav: [
     { text: 'Главная', link: '/' },
-    {
-      text: 'Скачать',
-      items: [
-        { text: 'HirokuLauncher 1', link: '/download' },
-        { text: 'HirokuLauncher 2', link: '/zl2-download' },
-      ],
-    },
-    {
-      text: 'Документация',
-      items: [
-        { text: 'Документация лаунчера', link: '/docs/projects/zl2' },
-        { text: 'О сайте', link: '/docs/about/about' },
-      ],
-    },
+    { text: 'Скачать', link: '/download' },
   ],
   sidebar: [
     {
-      text: 'Проекты',
+      text: 'Справка',
       items: [
-        { text: 'HirokuLauncher 1', link: '/docs/projects/zl1' },
-        { text: 'HirokuLauncher 2', link: '/docs/projects/zl2' },
-      ],
-    },
-    {
-      text: 'Руководство по ZL2',
-      items: [
-        { text: 'Установка игры', link: '/docs/help/download_game' },
-        { text: 'ModLoader', link: '/docs/help/modloader' },
-        { text: 'Аккаунты', link: '/docs/help/account' },
-        { text: 'Сторонняя авторизация', link: '/docs/help/auth_server' },
-        { text: 'Скины и плащи', link: '/docs/help/changing_skin_capes' },
-        { text: 'Изоляция версий', link: '/docs/help/version_isolation' },
-      ],
-    },
-    {
-      text: 'Справка по управлению ZL2',
-      collapsed: true,
-      items: [
-        { text: 'Обзор', link: '/docs/control2_help/overview' },
-        { text: 'Базовые операции редактора', link: '/docs/control2_help/basic_operation' },
-        { text: 'Операции с раскладкой', link: '/docs/control2_help/control_layout_operations' },
-        { text: 'Слои управления', link: '/docs/control2_help/control_layer' },
-        { text: 'Элементы управления', link: '/docs/control2_help/controls' },
-      ],
-    },
-    {
-      text: 'О сайте',
-      items: [
-        { text: 'О сайте', link: '/docs/about/about' },
+        { text: 'О проекте', link: '/docs/about/about' },
         { text: 'Политика конфиденциальности', link: '/docs/about/privacy' },
         { text: 'Условия использования', link: '/docs/about/terms' },
       ],
