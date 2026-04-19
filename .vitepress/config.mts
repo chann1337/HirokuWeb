@@ -1,9 +1,13 @@
 import { defineConfig } from 'vitepress';
 
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "HirokuLauncher",
   description: 'HirokuLauncher - 在 Android 设备上畅玩 Minecraft: Java Edition',
+  base: isGitHubActions && repoName ? `/${repoName}/` : '/',
   srcExclude: ['official-website/**'],
   lastUpdated: true,
   locales: {
