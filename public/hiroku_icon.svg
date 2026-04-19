@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="HirokuLauncher icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5d4dff"/>
+      <stop offset="55%" stop-color="#3f8bff"/>
+      <stop offset="100%" stop-color="#62e1ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="52" fill="url(#bg)"/>
+  <path d="M64 64h40v56h48V64h40v128h-40v-40h-48v40H64z" fill="#fff"/>
+</svg>

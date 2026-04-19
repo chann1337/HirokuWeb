@@ -36,25 +36,35 @@ jobs:
       run: npm run docs:build
 
     - name: Install sshpass
+      if: ${{ env.VPS_IP != '' && env.VPS_PASSWORD != '' && env.VPS_BASE_URL != '' }}
       run: sudo apt-get update && sudo apt-get install -y sshpass
 
     - name: Compress build artifacts
+      if: ${{ env.VPS_IP != '' && env.VPS_PASSWORD != '' && env.VPS_BASE_URL != '' }}
       run: tar -czvf build.tar.gz -C ./.vitepress/dist .
 
     - name: Upload to VPS
+      if: ${{ env.VPS_IP != '' && env.VPS_PASSWORD != '' && env.VPS_BASE_URL != '' }}
       run: |
         export SSHPASS="${{ secrets.VPS_PASSWORD }}"
         sshpass -e scp -P ${{ env.VPS_PORT }} -o StrictHostKeyChecking=no build.tar.gz ${{ env.VPS_USERNAME }}@${{ env.VPS_IP }}:/tmp/build.tar.gz
 
     - name: Extract on VPS
+      if: ${{ env.VPS_IP != '' && env.VPS_PASSWORD != '' && env.VPS_BASE_URL != '' }}
       run: |
         export SSHPASS="${{ secrets.VPS_PASSWORD }}"
         sshpass -e ssh -p ${{ env.VPS_PORT }} -o StrictHostKeyChecking=no ${{ env.VPS_USERNAME }}@${{ env.VPS_IP }} 'rm -rf ${{ env.VPS_BASE_URL }}/* && tar -xzvf /tmp/build.tar.gz -C ${{ env.VPS_BASE_URL }} && rm /tmp/build.tar.gz'
         
     - name: Set Permissions on VPS
+      if: ${{ env.VPS_IP != '' && env.VPS_PASSWORD != '' && env.VPS_BASE_URL != '' }}
       run: |
         export SSHPASS="${{ secrets.VPS_PASSWORD }}"
         sshpass -e ssh -p ${{ env.VPS_PORT }} -o StrictHostKeyChecking=no ${{ env.VPS_USERNAME }}@${{ env.VPS_IP }} "chmod -R 755 ${{ env.VPS_BASE_URL }}"
 
     - name: Deployment completed
+      if: ${{ env.VPS_IP != '' && env.VPS_PASSWORD != '' && env.VPS_BASE_URL != '' }}
       run: echo "已将文档站部署到VPS服务器！"
+
+    - name: VPS deploy skipped
+      if: ${{ env.VPS_IP == '' || env.VPS_PASSWORD == '' || env.VPS_BASE_URL == '' }}
+      run: echo "VPS secrets are not configured. Skipping VPS deployment safely."

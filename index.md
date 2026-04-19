@@ -7,7 +7,7 @@ hero:
   text: "Запуск Minecraft Java Edition на Android"
   tagline: Современный интерфейс, стабильная работа и удобная настройка на мобильных устройствах.
   image:
-    src: /zl_token.png
+    src: /hiroku_icon.svg
     alt: Logo
   actions:
     - theme: brand
