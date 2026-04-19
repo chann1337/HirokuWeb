@@ -7,7 +7,7 @@ hero:
   text: "Run Minecraft Java Edition on Android"
   tagline: Modern interface, stable performance, and simple setup.
   image:
-    src: /zl_token.png
+    src: /hiroku_icon.svg
     alt: Logo
   actions:
     - theme: brand
