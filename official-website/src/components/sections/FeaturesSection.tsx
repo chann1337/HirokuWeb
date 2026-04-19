@@ -51,14 +51,14 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="py-24 bg-[var(--bg-alt)] transition-colors duration-300 overflow-hidden">
+    <section id="features" className="py-24 bg-[var(--bg-alt)]/80 transition-colors duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-6 text-[var(--text-1)]"
+            className="text-3xl md:text-5xl font-black mb-6 text-[var(--text-1)]"
           >
             {t('features.title')}
           </motion.h2>
@@ -96,10 +96,10 @@ const FeaturesSection = () => {
                     "text-left"
                   )}
                 >
-                  <h3 className="text-2xl md:text-4xl font-bold text-[var(--text-1)] leading-tight">
+                  <h3 className="text-2xl md:text-4xl font-extrabold text-[var(--text-1)] leading-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-base md:text-lg text-[var(--text-2)] leading-relaxed">
+                  <p className="text-base md:text-lg text-[var(--text-2)] leading-relaxed max-w-xl">
                     {feature.description}
                   </p>
                 </motion.div>
@@ -112,8 +112,8 @@ const FeaturesSection = () => {
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
                   className="w-full md:w-1/2"
                 >
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[var(--divider)]/10 group">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[var(--brand)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[var(--divider)]/40 group glass-card p-0">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[var(--brand)]/20 via-transparent to-cyan-300/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
                     <img 
                       src={`/image/${lang}/${feature.image}`} 
                       alt={feature.title}

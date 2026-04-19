@@ -1,16 +1,16 @@
 ---
-title: "Welcome to Zalith Launcher Blog"
+title: "Welcome to HirokuLauncher Blog"
 slug: "welcome-to-zalith-blog"
 date: "2026-03-27"
 authors: ["leemwood"]
 tags: ["Announcement", "Blog"]
 category: "Announcement"
-description: "Welcome to the official Zalith Launcher blog! We'll be posting the latest development updates, tutorials, and version release notes here."
+description: "Welcome to the official HirokuLauncher blog! We'll be posting the latest development updates, tutorials, and version release notes here."
 ---
 
-# Welcome to Zalith Launcher Blog
+# Welcome to HirokuLauncher Blog
 
-We're excited to announce that the official Zalith Launcher blog is now live!
+We're excited to announce that the official HirokuLauncher blog is now live!
 
 ## What Will We Share Here?
 
@@ -26,7 +26,7 @@ We'll regularly post development progress updates to keep you informed about new
 
 ### Tutorial Articles
 
-Helping you make the most of Zalith Launcher:
+Helping you make the most of HirokuLauncher:
 
 - Installation and configuration guides
 - Frequently asked questions
@@ -56,4 +56,4 @@ If you have any questions or suggestions, feel free to reach out through:
 - Discord Community
 - QQ Group
 
-Thank you for supporting Zalith Launcher!
+Thank you for supporting HirokuLauncher!

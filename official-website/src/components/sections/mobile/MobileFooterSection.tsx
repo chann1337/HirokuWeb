@@ -18,8 +18,8 @@ const MobileFooterSection = () => {
           className="text-center mb-6"
         >
           <div className="flex items-center justify-center gap-2 mb-3">
-            <img src="/zl_icon.webp" alt="Logo" className="w-8 h-8 rounded-lg" />
-            <span className="font-bold text-lg text-[var(--text-1)]">Zalith Launcher</span>
+            <img src="/zl_icon.webp" alt="HirokuLauncher logo" className="w-8 h-8 rounded-lg" />
+            <span className="font-bold text-lg text-[var(--text-1)]">HirokuLauncher</span>
           </div>
           <p className="text-xs text-[var(--text-2)] max-w-xs mx-auto">
             {t('footer.desc')}
@@ -78,7 +78,7 @@ const MobileFooterSection = () => {
           <p className="flex items-center justify-center gap-1 mb-1">
             <ShieldCheck size={10} /> {t('common.notAffiliated')}
           </p>
-          <p>(c) {currentYear} Zalith Launcher Team</p>
+          <p>(c) {currentYear} HirokuLauncher Team</p>
         </motion.div>
       </div>
     </section>

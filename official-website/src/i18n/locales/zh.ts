@@ -27,7 +27,7 @@ export default {
   hero: {
     badge: "稳定、高效、纯净",
     title: "在 Android 上 <span class='text-[var(--brand)]'>重新定义</span> Java 版体验",
-    description: "Zalith Launcher 是一款专为 Android 打造的 Minecraft: Java Edition 启动器。它提供了卓越的性能、极简的设计以及全方位的自定义功能。",
+    description: "HirokuLauncher 是一款专为 Android 打造的 Minecraft: Java Edition 启动器。它提供了卓越性能、现代化设计以及全方位的自定义能力。",
     speed: "极速启动",
     speedDesc: "经过优化的内核，秒级进入游戏世界",
     safe: "纯净安全",
@@ -36,8 +36,8 @@ export default {
     customDesc: "从 UI 到游戏参数，一切皆可按需配置",
   },
   features: {
-    title: "为什么选择 Zalith?",
-    subtitle: "我们不仅仅是一个启动器，更是您在移动端畅玩 Java 版的最佳伴侣。",
+    title: "为什么选择 HirokuLauncher?",
+    subtitle: "它不只是启动器，更是你在移动端畅玩 Java 版的高性能控制中心。",
     ui: {
       title: "现代化 UI 体验",
       desc: "采用现代设计语言构建，提供丝滑、直观的界面设计。告别繁琐的操作，一切功能触手可及，让启动游戏本身成为一种享受。"
@@ -64,8 +64,8 @@ export default {
     }
   },
   download: {
-    title: "获取 Zalith Launcher",
-    subtitle: "获取最适合您设备的 Zalith Launcher 版本",
+    title: "获取 HirokuLauncher",
+    subtitle: "选择最适合你设备的 HirokuLauncher 版本",
     recommend: "推荐",
     legacy: "旧版",
     apiFailed: "API 访问受限",
@@ -118,7 +118,7 @@ export default {
   },
   blog: {
     title: "博客",
-    subtitle: "了解 Zalith Launcher 的最新动态、开发日志和教程文章",
+    subtitle: "了解 HirokuLauncher 的最新动态、开发日志和教程文章",
     readMore: "阅读更多",
     readingTime: "{{minutes}} 分钟阅读",
     publishedOn: "发布于",
@@ -143,7 +143,7 @@ export default {
     submitIssue: "提交 Issue",
     content: `# 隐私政策
 
-Zalith Launcher（以下简称“我们”）深知隐私对您的重要性，并致力于保护您的个人信息。本隐私政策阐述了我们在您访问本网站及使用相关服务时如何处理您的数据。
+HirokuLauncher（以下简称“我们”）深知隐私对您的重要性，并致力于保护您的个人信息。本隐私政策阐述了我们在您访问本网站及使用相关服务时如何处理您的数据。
 
 ## 1. 我们收集的信息
 

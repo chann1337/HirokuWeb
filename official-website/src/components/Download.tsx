@@ -252,7 +252,7 @@ const DownloadSection = () => {
                   : "text-[var(--text-2)] hover:bg-[var(--bg-alt)]"
               )}
             >
-              Zalith Launcher 2 ({t('download.recommend')})
+              HirokuLauncher 2 ({t('download.recommend')})
             </button>
             <button
               onClick={() => setActiveProject('zl1')}
@@ -263,7 +263,7 @@ const DownloadSection = () => {
                   : "text-[var(--text-2)] hover:bg-[var(--bg-alt)]"
               )}
             >
-              Zalith Launcher 1 ({t('download.legacy')})
+              HirokuLauncher 1 ({t('download.legacy')})
             </button>
           </div>
         </div>

@@ -40,16 +40,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-[100] bg-[var(--bg)]/80 backdrop-blur-lg border-b border-[var(--divider)]/20 transition-colors duration-300">
+    <nav className="fixed top-0 w-full z-[100] bg-[var(--bg)]/75 backdrop-blur-xl border-b border-[var(--divider)]/30 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center gap-2 group">
-            <img src="/zl_icon.webp" alt="Logo" className="w-8 h-8 rounded-lg shadow-sm group-hover:scale-110 transition-transform" />
+            <img src="/zl_icon.webp" alt="HirokuLauncher logo" className="w-8 h-8 rounded-lg shadow-sm group-hover:scale-110 transition-transform" />
             <div className="flex flex-col">
-              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[var(--brand)] to-[var(--brand)] leading-none">
-                Zalith Launcher
+              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[var(--brand)] to-cyan-400 leading-none">
+                HirokuLauncher
               </span>
-              <span className="text-[10px] font-medium text-[var(--brand)] opacity-70 tracking-widest uppercase mt-0.5">
+              <span className="text-[10px] font-semibold text-[var(--brand)] opacity-80 tracking-[0.22em] uppercase mt-0.5">
                 {t('common.beta')}
               </span>
             </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               link.external ? (
-                <a 
+                <a
                   key={link.name}
                   href={link.path} 
                   className="text-[var(--text-2)] hover:text-[var(--brand)] transition-colors font-medium"
@@ -95,7 +95,7 @@ const Navbar = () => {
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <a href="https://github.com/ZalithLauncher" target="_blank" rel="noreferrer">
+            <a href="https://github.com/ZalithLauncher" target="_blank" rel="noreferrer" className="p-2 rounded-full hover:bg-[var(--bg-alt)] transition-colors">
               <Github size={20} className="text-[var(--text-2)] hover:text-[var(--brand)] transition-colors" />
             </a>
           </div>
