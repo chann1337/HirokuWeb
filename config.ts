@@ -3,7 +3,7 @@ import zh from './locales/zh';
 
 export default defineAdditionalConfig({
   lang: 'zh-Hans',
-  description: "Zalith Launcher是一款基于PojavLauncher开发的Minecraft启动器，可在Android设备上运行Minecraft: Java Edition",
+  description: "HirokuLauncher 是一款面向 Android 的 Minecraft Java Edition 启动器，提供更现代的界面与更稳定的体验。",
 
   themeConfig: zh
 });

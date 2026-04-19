@@ -1,11 +1,11 @@
 ---
 sidebar: false
 ---
-# Download Zalith Launcher 1
+# Download HirokuLauncher 1
 
 ## Official Download Channels
 
-You can download the latest version of Zalith Launcher from our GitHub Releases page.
+You can download the latest version of HirokuLauncher from our GitHub Releases page.
 <div class="download-container">
   <a href="https://github.com/ZalithLauncher/ZalithLauncher/releases" class="download-button">
     <span class="download-icon">⬇️</span>
@@ -60,6 +60,6 @@ You can download the latest version of Zalith Launcher from our GitHub Releases 
 
 ---
 
-💡 **Come try the new Zalith Launcher 2?**
+💡 **Try the new HirokuLauncher 2**
 
-[ZalithLauncher 2](./zl2-download)
+[Open HirokuLauncher 2](./zl2-download)

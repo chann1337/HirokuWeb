@@ -46,8 +46,8 @@ export default <DefaultTheme.Config> {
         { text: '首页', link: '/' },
         { text: '下载',
             items: [
-                { text: 'Zalith Launcher 1', link: '/download' },
-                { text: 'Zalith Launcher 2', link: '/zl2-download' }
+                { text: 'HirokuLauncher 1', link: '/download' },
+                { text: 'HirokuLauncher 2', link: '/zl2-download' }
             ]
         },
         { text: '公告', link: '/docs/announcement/discord-shutdown' },
@@ -70,8 +70,8 @@ export default <DefaultTheme.Config> {
         {
             text: '项目',
             items: [
-                { text: 'Zalith Launcher 1', link: '/docs/projects/zl1' },
-                { text: 'Zalith Launcher 2', link: '/docs/projects/zl2' }
+                { text: 'HirokuLauncher 1', link: '/docs/projects/zl1' },
+                { text: 'HirokuLauncher 2', link: '/docs/projects/zl2' }
             ]
         },
         {
@@ -110,14 +110,14 @@ export default <DefaultTheme.Config> {
 
     domainWarning: {
         title: '访问提示',
-        content: '我们检测到您正在使用 <strong>{{ currentHostname }}</strong> 访问。为了获得更快的网站访问速度和更好的稳定性，我们强烈建议您访问我们的 EdgeOne CDN 节点：',
+        content: '我们检测到您正在使用 <strong>{{ currentHostname }}</strong> 访问。为获得更稳定和更快的访问体验，建议访问官方主站：',
         button: '我知道了',
-        officialDomain: 'www.zalithlauncher.cn'
+        officialDomain: 'ann1337.github.io'
     },
 
     footer: {
         message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">新ICP备2024015133号-4</a>',
-        copyright: '版权所有 © 2025 Zalith Launcher | MIT 许可证'
+        copyright: '版权所有 © 2026 HirokuLauncher | MIT 许可证'
     },
 
     notFound: {
