@@ -34,34 +34,23 @@ export default <DefaultTheme.Config> {
     darkModeSwitchLabel: '外观',
     returnToTopLabel: '返回顶部',
     sidebarMenuLabel: '菜单',
-    editLink: {
-        pattern: 'https://github.com/zalithlauncher/zalithwebsite/edit/main/:path',
-        text: '在 GitHub 上编辑此页'
-    },
+    editLink: false,
     lastUpdated: {
         text: '更新于',
         formatOptions: { dateStyle: 'long', timeStyle: 'short' }
     },
     nav: [
-        { text: '首页', link: '/' },
-        { text: '下载',
+        { text: 'Главная', link: '/' },
+        { text: 'Скачать',
             items: [
                 { text: 'HirokuLauncher 1', link: '/download' },
                 { text: 'HirokuLauncher 2', link: '/zl2-download' }
             ]
         },
-        { text: '公告', link: '/docs/announcement/discord-shutdown' },
-        { text: '更多', 
+        { text: 'Документация', 
             items: [
-                { text: '启动器文档', link: '/docs/projects/zl2' },
-                { text: '关于本站', link: '/docs/about/about' }
-            ]
-        },
-        { text: '切换网络节点', 
-            items: [
-                { text: '[AL] 阿里云节点', link: 'https://zalithlauncher.cn' },
-                { text: '[CF]Cloudflare 节点', link: 'https://cf.zalithlauncher.cn' },
-                { text: '[EO]edgeone 节点 - 推荐', link: 'https://www.zalithlauncher.cn' }
+                { text: 'Документация лаунчера', link: '/docs/projects/zl2' },
+                { text: 'О сайте', link: '/docs/about/about' }
             ]
         }
     ],
@@ -108,16 +97,8 @@ export default <DefaultTheme.Config> {
 
     outlineTitle: '当前页大纲',
 
-    domainWarning: {
-        title: '访问提示',
-        content: '我们检测到您正在使用 <strong>{{ currentHostname }}</strong> 访问。为获得更稳定和更快的访问体验，建议访问官方主站：',
-        button: '我知道了',
-        officialDomain: 'ann1337.github.io'
-    },
-
     footer: {
-        message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">新ICP备2024015133号-4</a>',
-        copyright: '版权所有 © 2026 HirokuLauncher | MIT 许可证'
+        copyright: '© 2026 HirokuLauncher | MIT License'
     },
 
     notFound: {

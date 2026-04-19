@@ -52,7 +52,7 @@ const sourceAvailability = computed(() => ({
 
 // 下载源定义
 const downloadSources: DownloadSource[] = [
-  { id: 'github', name: 'GitHub 官方', description: '官方发布渠道', speed: '海外较快' },
+  { id: 'github', name: '官方源', description: '官方发布渠道', speed: '海外较快' },
   { id: 'mirror', name: 'fishcpy源', description: '咬一口的鱼py提供', speed: '国内较快', contributor: { name: '咬一口的鱼py(fishcpy)', url: 'https://github.com/fishcpy' } },
   { id: 'haha', name: '哈哈源', description: 'FrostLynx 提供', speed: '国内较快', contributor: { name: 'FrostLynx', url: 'https://frostlynx.work' } },
   { id: 'lemwood', name: '柠枺镜像', description: 'Lemwood 提供', speed: '国内较快', contributor: { name: 'Lemwood', url: 'https://lemwood.cn' } },
@@ -475,7 +475,7 @@ async function loadLocalVersionInfo() {
     
     const localData = await response.json()
     
-    // 构建与GitHub API兼容的数据结构
+    // 构建与API兼容的数据结构
     const githubCompatibleData = {
       name: `Zalith Launcher 2 ${localData.latest_version}`,
       tag_name: `v${localData.latest_version}`,
@@ -627,15 +627,15 @@ function generateMirrorUrl(assetName: string, tagName: string) {
   return `https://download.fishcpy.top/dl/zl2/${version}/${assetName}`
 }
 
-// GitHub下载链接
-function getOriginalGitHubUrl(asset: any) {
+// 官方下载链接
+function getOriginalOfficialUrl(asset: any) {
   return asset.browser_download_url
 }
 
 // 从柠枺镜像源数据中获取对应的下载链接
 function getLemwoodUrl(asset: any) {
     if (!lemwoodData.value || !lemwoodData.value.length) {
-        return asset.browser_download_url; // 降级到GitHub链接
+        return asset.browser_download_url; // 降级到官方链接
     }
 
     // 策略1：通过 tag_name 匹配
@@ -745,7 +745,7 @@ function getDownloadUrl(asset: any) {
   } else if (selectedDownloadSource.value === 'lemwood') {
     return getLemwoodUrl(asset)
   } else {
-    return getOriginalGitHubUrl(asset)
+    return getOriginalOfficialUrl(asset)
   }
 }
 
@@ -790,7 +790,7 @@ onMounted(() => {
       <div class="warning-icon">⚠️</div>
       <div class="warning-content">
         <h3>API访问受限</h3>
-        <p>GitHub API无法访问，已使用本地版本信息。第三方下载源可能无法获取最新版本。</p>
+        <p>API 无法访问，已使用本地版本信息。第三方下载源可能无法获取最新版本。</p>
       </div>
     </div>
     

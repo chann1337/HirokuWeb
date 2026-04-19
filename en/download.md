@@ -5,11 +5,11 @@ sidebar: false
 
 ## Official Download Channels
 
-You can download the latest version of HirokuLauncher from our GitHub Releases page.
+You can download the latest version of HirokuLauncher from the official release channel.
 <div class="download-container">
   <a href="https://github.com/ZalithLauncher/ZalithLauncher/releases" class="download-button">
     <span class="download-icon">⬇️</span>
-    <span class="download-text">Download from GitHub Releases</span>
+    <span class="download-text">Download latest release</span>
   </a>
 </div>
 

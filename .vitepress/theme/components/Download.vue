@@ -93,9 +93,9 @@ const baseDeviceTypes: DeviceType[] = [
 
 // 下载源定义
 const downloadSources: DownloadSource[] = [
-  { id: 'github', name: 'GitHub 官方', description: '官方发布渠道', speed: '海外较快' },
+  { id: 'github', name: '官方源', description: '官方发布渠道', speed: '海外较快' },
   { id: 'mirror', name: '国内镜像', description: '第三方加速', speed: '国内较快', contributor: { name: '咬一口的鱼py(fishcpy)', url: 'https://github.com/fishcpy' } },
-  { id: 'foxington', name: 'github.com/XiaoluoFoxington源', description: '第三方镜像源', speed: '国内较快', contributor: { name: 'XiaoluoFoxington', url: 'https://github.com/XiaoluoFoxington' } },
+  { id: 'foxington', name: 'Foxington 源', description: '第三方镜像源', speed: '国内较快', contributor: { name: 'XiaoluoFoxington', url: 'https://github.com/XiaoluoFoxington' } },
   { id: 'haha', name: '哈哈源', description: 'FrostLynx 提供', speed: '国内较快', contributor: { name: 'FrostLynx', url: 'https://frostlynx.work' } },
   { id: 'lemwood', name: '柠枺镜像', description: '由 柠枺(lemwood.cn) 提供', speed: '国内较快', contributor: { name: '柠枺', url: 'https://lemwood.cn' } }
 ]
@@ -261,7 +261,7 @@ async function detectIsChinaIP(): Promise<boolean> {
     // 如果国家代码为CN，或地区为中国，返回true
     return data.country === 'CN' || data.region === 'China'
   } catch (error) {
-    console.warn('IP检测失败，默认使用GitHub源:', error)
+    console.warn('IP检测失败，默认使用官方源:', error)
     return false
   }
 }
@@ -468,7 +468,7 @@ async function loadLocalVersionInfo() {
     
     const localData = await response.json()
     
-    // 构建与GitHub API兼容的数据结构
+    // 构建与API兼容的数据结构
     const localRelease = {
       name: `ZalithLauncher ${localData.latest_version}`,
       tag_name: `v${localData.latest_version}`,
@@ -662,15 +662,15 @@ function generateMirrorUrl(assetName: string, tagName: string) {
   return `https://download.fishcpy.top/dl/zl/${version}/${assetName}`
 }
 
-// GitHub下载链接
-function getOriginalGitHubUrl(asset: any) {
+// 官方下载链接
+function getOriginalOfficialUrl(asset: any) {
   return asset.browser_download_url
 }
 
 // 从Foxington源数据中获取对应的下载链接
 function getFoxingtonUrl(asset: any) {
   if (!foxingtonData.value || !Array.isArray(foxingtonData.value)) {
-    return asset.browser_download_url // 降级到GitHub链接
+    return asset.browser_download_url // 降级到官方链接
   }
   
   // 根据文件名匹配架构类型
@@ -704,7 +704,7 @@ function getFoxingtonUrl(asset: any) {
     return universalFile.url
   }
   
-  // 最后降级到GitHub链接
+  // 最后降级到官方链接
   return asset.browser_download_url
 }
 
@@ -782,7 +782,7 @@ const currentDownloadSource = computed(() => {
 // 获取柠枺镜像源URL
 function getLemwoodUrl(asset: any) {
   if (!lemwoodData.value || !lemwoodData.value.length) {
-    return getOriginalGitHubUrl(asset);
+    return getOriginalOfficialUrl(asset);
   }
 
   // 策略1：通过 tag_name 匹配
@@ -807,7 +807,7 @@ function getLemwoodUrl(asset: any) {
     }
   }
 
-  return getOriginalGitHubUrl(asset);
+  return getOriginalOfficialUrl(asset);
 }
 
 // 获取下载链接
@@ -825,7 +825,7 @@ function getDownloadUrl(asset: any) {
   } else if (selectedDownloadSource.value === 'lemwood') {
     return getLemwoodUrl(asset)
   } else {
-    return getOriginalGitHubUrl(asset)
+    return getOriginalOfficialUrl(asset)
   }
 }
 
@@ -865,7 +865,7 @@ onMounted(() => {
     
     fetchLatestRelease()
     
-    // 如果使用本地版本，确保下载源为GitHub官方源
+    // 如果使用本地版本，确保下载源为官方源
     if (fallbackToLocal.value) {
       selectedDownloadSource.value = 'github'
     }
