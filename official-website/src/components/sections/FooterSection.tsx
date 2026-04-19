@@ -36,7 +36,8 @@ const FooterSection = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden flex flex-col justify-end bg-[var(--bg)] border-t border-[var(--divider)]/10 pt-12">
+    <section className="relative overflow-hidden flex flex-col justify-end bg-[var(--bg)] border-t border-[var(--divider)]/20 pt-12">
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_10%_15%,color-mix(in_srgb,var(--brand)_18%,transparent)_0%,transparent_40%),radial-gradient(circle_at_80%_80%,color-mix(in_srgb,#56d8ff_14%,transparent)_0%,transparent_45%)] opacity-80" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <motion.div
@@ -47,23 +48,23 @@ const FooterSection = () => {
             className="lg:col-span-2 space-y-4"
           >
             <div className="flex items-center gap-3">
-              <img src="/zl_icon.webp" alt="Logo" className="w-10 h-10 rounded-xl shadow-lg" />
-              <span className="font-bold text-2xl tracking-tight text-[var(--text-1)]">Zalith Launcher</span>
+              <img src="/zl_icon.webp" alt="HirokuLauncher logo" className="w-10 h-10 rounded-xl shadow-lg" />
+              <span className="font-bold text-2xl tracking-tight text-[var(--text-1)]">HirokuLauncher</span>
             </div>
             <p className="text-[var(--text-2)] max-w-sm leading-relaxed">
               {t('footer.desc')}
             </p>
             <div className="flex gap-4 pt-2">
               <a href="https://github.com/ZalithLauncher" target="_blank" rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-[var(--bg-alt)] flex items-center justify-center text-[var(--text-2)] hover:text-[var(--brand)] hover:scale-110 transition-all">
+                className="w-10 h-10 rounded-full bg-[var(--bg-alt)] border border-[var(--divider)]/40 flex items-center justify-center text-[var(--text-2)] hover:text-[var(--brand)] hover:scale-110 transition-all">
                 <Github size={20} />
               </a>
               <a href="https://discord.gg/e7C4kytRgK" target="_blank" rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-[var(--bg-alt)] flex items-center justify-center text-[var(--text-2)] hover:text-[var(--brand)] hover:scale-110 transition-all">
+                className="w-10 h-10 rounded-full bg-[var(--bg-alt)] border border-[var(--divider)]/40 flex items-center justify-center text-[var(--text-2)] hover:text-[var(--brand)] hover:scale-110 transition-all">
                 <MessageSquare size={20} />
               </a>
               <a href="https://afdian.com/a/MovTery" target="_blank" rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-[var(--bg-alt)] flex items-center justify-center text-[var(--text-2)] hover:text-[var(--brand)] hover:scale-110 transition-all">
+                className="w-10 h-10 rounded-full bg-[var(--bg-alt)] border border-[var(--divider)]/40 flex items-center justify-center text-[var(--text-2)] hover:text-[var(--brand)] hover:scale-110 transition-all">
                 <Coffee size={20} />
               </a>
             </div>
@@ -109,7 +110,7 @@ const FooterSection = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-[var(--text-2)] text-center md:text-left">
-              <p>(c) {currentYear} Zalith Launcher Team. {t('common.allRightsReserved')}</p>
+              <p>(c) {currentYear} HirokuLauncher Team. {t('common.allRightsReserved')}</p>
               <div className="mt-1 flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1">
                 <p className="opacity-60 text-xs flex items-center gap-1">
                   <ShieldCheck size={12} /> {t('common.notAffiliated')}

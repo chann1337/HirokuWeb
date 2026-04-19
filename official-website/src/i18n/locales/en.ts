@@ -26,8 +26,8 @@ export default {
   },
   hero: {
     badge: "Stable, Efficient, Pure",
-    title: "On Android <span class='text-[var(--brand)]'>Redefining</span> Java Experience",
-    description: "Zalith Launcher is a Minecraft: Java Edition launcher built specifically for Android. It provides exceptional performance, minimalist design, and full customization.",
+    title: "On Android, <span class='text-[var(--brand)]'>Level Up</span> Your Java Experience",
+    description: "HirokuLauncher is a Minecraft: Java Edition launcher crafted for Android. Enjoy smooth performance, a polished interface, and deep customization in one place.",
     speed: "Fast Launch",
     speedDesc: "Optimized core for entering the game world in seconds",
     safe: "Pure & Safe",
@@ -36,8 +36,8 @@ export default {
     customDesc: "Everything from UI to game parameters can be configured",
   },
   features: {
-    title: "Why Choose Zalith?",
-    subtitle: "We are more than just a launcher; we are your best companion for playing Java Edition on mobile.",
+    title: "Why Choose HirokuLauncher?",
+    subtitle: "More than a launcher, HirokuLauncher is your full control center for Java Edition on mobile.",
     ui: {
       title: "Modern UI Experience",
       desc: "Built with a modern design language, providing a smooth and intuitive interface. Say goodbye to cumbersome operations; every feature is at your fingertips, making launching the game a joy."
@@ -64,8 +64,8 @@ export default {
     }
   },
   download: {
-    title: "Get Zalith Launcher",
-    subtitle: "Get the version of Zalith Launcher that best fits your device",
+    title: "Get HirokuLauncher",
+    subtitle: "Choose the HirokuLauncher build that best matches your Android device",
     recommend: "Recommended",
     legacy: "Legacy",
     apiFailed: "API Access Restricted",
@@ -102,7 +102,7 @@ export default {
     },
   },
   footer: {
-    desc: "Dedicated to providing Android users with the purest, most efficient, and modern Minecraft Java Edition launching experience.",
+    desc: "HirokuLauncher delivers a clean, fast, and modern Minecraft Java Edition launch experience on Android.",
     projects: "Projects",
     community: "Community",
     support: "Support",
@@ -118,7 +118,7 @@ export default {
   },
   blog: {
     title: "Blog",
-    subtitle: "Stay updated with the latest news, development logs, and tutorials for Zalith Launcher",
+    subtitle: "Stay updated with the latest news, dev logs, and tutorials for HirokuLauncher",
     readMore: "Read More",
     readingTime: "{{minutes}} min read",
     publishedOn: "Published on",
@@ -143,7 +143,7 @@ export default {
     submitIssue: "Open Issue",
     content: `# Privacy Policy
 
-Zalith Launcher ("we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we handle your information when you visit our website and use our services.
+HirokuLauncher ("we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we handle your information when you visit our website and use our services.
 
 ## 1. Information We Collect
 

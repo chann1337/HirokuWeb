@@ -9,6 +9,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative overflow-hidden flex flex-col items-center min-h-screen pt-16 md:pt-16">
+      <div className="hero-grid" />
       <div className="hero-glow" />
 
       <div className="flex-grow flex items-center w-full py-12 md:py-20">
@@ -20,7 +21,7 @@ const HeroSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-[var(--brand)]/10 text-[var(--brand)] mb-6 md:mb-8 border border-[var(--brand)]/20">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-[var(--brand)]/12 text-[var(--brand)] mb-6 md:mb-8 border border-[var(--brand)]/25 shadow-sm">
                 <Zap size={14} className="mr-2" /> {t('hero.badge')}
               </span>
             </motion.div>
@@ -30,7 +31,7 @@ const HeroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 md:mb-8 leading-tight text-[var(--text-1)]"
+              className="text-4xl md:text-7xl font-black tracking-tight mb-6 md:mb-8 leading-tight text-[var(--text-1)] max-w-4xl mx-auto"
               dangerouslySetInnerHTML={{ __html: t('hero.title') }}
             />
 
@@ -68,11 +69,12 @@ const HeroSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[var(--divider)]/10"
+          className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-[var(--divider)]/40 shadow-2xl"
         >
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-[var(--brand)]/18 via-transparent to-cyan-300/18 z-10" />
           <img 
             src={`/image/${lang}/home.jpg`}
-            alt="Zalith Launcher Home"
+            alt="HirokuLauncher Home"
             className="w-full h-[300px] md:h-auto object-cover md:object-contain object-[right_top] md:object-center transform hover:scale-[1.01] transition-transform duration-700"
           />
         </motion.div>

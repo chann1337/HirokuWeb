@@ -2,52 +2,52 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-brand-light: #A63A17;
-  --color-brand-dark: #FFB59F;
+  --color-brand-light: #5d4dff;
+  --color-brand-dark: #b6adff;
   --color-brand: var(--brand);
 
-  --color-bg-light: #FFF8F6;
-  --color-bg-dark: #1C110E;
+  --color-bg-light: #f5f7ff;
+  --color-bg-dark: #090b1b;
   --color-bg: var(--bg);
 
-  --color-bg-alt-light: #FFF1ED;
-  --color-bg-alt-dark: #291D19;
+  --color-bg-alt-light: #edf1ff;
+  --color-bg-alt-dark: #141733;
   --color-bg-alt: var(--bg-alt);
 
-  --color-text-1-light: #241916;
-  --color-text-1-dark: #F4DED8;
+  --color-text-1-light: #151b3b;
+  --color-text-1-dark: #ecedff;
   --color-text-1: var(--text-1);
 
-  --color-text-2-light: #58423B;
-  --color-text-2-dark: #DFC0B7;
+  --color-text-2-light: #505b89;
+  --color-text-2-dark: #b8bfed;
   --color-text-2: var(--text-2);
 
-  --color-divider-light: #DFC0B7;
-  --color-divider-dark: #58423B;
+  --color-divider-light: #cfd6ff;
+  --color-divider-dark: #323966;
   --color-divider: var(--divider);
   
-  --background-image-hero-gradient: linear-gradient(-45deg, #ff9d7a 50%, #ffe6cc 50%);
-  --background-image-hero-gradient-dark: linear-gradient(-45deg, #ff7746 50%, #ffd890 50%);
+  --background-image-hero-gradient: linear-gradient(140deg, #5d4dff 0%, #3ec7ff 60%, #94e8ff 100%);
+  --background-image-hero-gradient-dark: linear-gradient(140deg, #7c70ff 0%, #3ca7ff 55%, #7ce4ff 100%);
 }
 
 /* Base Variables */
 :root {
-  --brand: #A63A17;
-  --bg: #FFF8F6;
-  --bg-alt: #FFF1ED;
-  --text-1: #241916;
-  --text-2: #58423B;
-  --divider: #DFC0B7;
+  --brand: #5d4dff;
+  --bg: #f5f7ff;
+  --bg-alt: #edf1ff;
+  --text-1: #151b3b;
+  --text-2: #505b89;
+  --divider: #cfd6ff;
 }
 
 /* Dark Mode Variables Override */
 .dark {
-  --brand: #FFB59F;
-  --bg: #1C110E;
-  --bg-alt: #291D19;
-  --text-1: #F4DED8;
-  --text-2: #DFC0B7;
-  --divider: #58423B;
+  --brand: #b6adff;
+  --bg: #090b1b;
+  --bg-alt: #141733;
+  --text-1: #ecedff;
+  --text-2: #b8bfed;
+  --divider: #323966;
 }
 
 @layer base {
@@ -56,24 +56,30 @@
     color: var(--text-1);
     transition: background-color 0.3s ease, color 0.3s ease;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-image:
+      radial-gradient(1300px 480px at 50% -180px, color-mix(in srgb, var(--brand) 20%, transparent), transparent),
+      linear-gradient(to bottom, color-mix(in srgb, var(--bg-alt) 45%, transparent), transparent 32%);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 rounded-full bg-[var(--brand)] text-white font-medium 
-    hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-[var(--brand)]/20;
+    @apply px-6 py-3 rounded-full text-white font-semibold transition-all active:scale-95;
+    background-image: linear-gradient(135deg, var(--brand), color-mix(in srgb, var(--brand) 60%, #45d4ff));
+    box-shadow: 0 16px 40px color-mix(in srgb, var(--brand) 30%, transparent);
   }
   
   .dark .btn-primary {
-    @apply bg-[var(--brand)] text-[var(--bg)] shadow-[var(--brand)]/10;
+    @apply text-[var(--bg)];
+    box-shadow: 0 14px 32px color-mix(in srgb, var(--brand) 22%, transparent);
   }
 
   .glass-card {
-    background-color: color-mix(in srgb, var(--bg) 40%, transparent);
-    backdrop-filter: blur(12px);
-    border: 1px solid color-mix(in srgb, var(--divider) 20%, transparent);
-    border-radius: 1rem;
+    background-color: color-mix(in srgb, var(--bg) 78%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--divider) 44%, transparent);
+    border-radius: 1.1rem;
+    box-shadow: 0 20px 50px color-mix(in srgb, var(--brand) 10%, transparent);
     padding: 1.5rem;
     @apply transition-all duration-300;
   }
@@ -163,15 +169,29 @@
 /* Custom Glow Effects */
 .hero-glow {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--brand) 15%, transparent) 0%, transparent 70%);
-  filter: blur(60px);
+  width: min(90vw, 880px);
+  height: min(90vw, 760px);
+  background:
+    radial-gradient(circle at 40% 38%, color-mix(in srgb, var(--brand) 24%, transparent) 0%, transparent 56%),
+    radial-gradient(circle at 70% 65%, color-mix(in srgb, #4dd8ff 22%, transparent) 0%, transparent 60%);
+  filter: blur(52px);
   z-index: -1;
   @apply transition-all duration-500;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--divider) 30%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--divider) 30%, transparent) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle at center, black 42%, transparent 90%);
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 /* Scrollbar styling */
@@ -197,7 +217,7 @@ html {
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .hero-glow {
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
   }
 }

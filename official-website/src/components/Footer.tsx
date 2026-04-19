@@ -56,8 +56,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3">
-              <img src="/zl_icon.webp" alt="Logo" className="w-10 h-10 rounded-xl shadow-lg" />
-              <span className="font-bold text-2xl tracking-tight text-[var(--text-1)]">Zalith Launcher</span>
+              <img src="/zl_icon.webp" alt="HirokuLauncher logo" className="w-10 h-10 rounded-xl shadow-lg" />
+              <span className="font-bold text-2xl tracking-tight text-[var(--text-1)]">HirokuLauncher</span>
             </div>
             <p className="text-[var(--text-2)] max-w-sm leading-relaxed">
               {t('footer.desc')}
@@ -105,7 +105,7 @@ const Footer = () => {
         <div className="pt-10 border-t border-[var(--divider)]/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-sm text-[var(--text-2)] text-center md:text-left">
-              <p>© {currentYear} Zalith Launcher Team. {t('common.allRightsReserved')}</p>
+              <p>© {currentYear} HirokuLauncher Team. {t('common.allRightsReserved')}</p>
               <div className="mt-1 flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1">
                 <p className="opacity-60 text-xs flex items-center gap-1">
                   <ShieldCheck size={12} /> {t('common.notAffiliated')}
