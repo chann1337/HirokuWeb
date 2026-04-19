@@ -3,7 +3,7 @@
     <div class="popup-content">
       <h3>{{ warningText.title }}</h3>
       <p v-html="warningText.content"></p>
-      <a href="https://www.zalithlauncher.cn" @click="redirectToWww">{{ warningText.officialDomain }}</a>
+      <a href="https://ann1337.github.io" @click="redirectToWww">{{ warningText.officialDomain }}</a>
       <button @click="dismissPopup" class="close-button">{{ warningText.button }}</button>
     </div>
   </div>
@@ -118,7 +118,7 @@ onMounted(async () => {
     console.log(`[Domain Check] Current Hostname | 检测访问域名: ${hostname}`);
 
     // 白名单域名列表
-    const whitelistDomains = ['www.zalithlauncher.cn', 'al.zalithlauncher.cn'];
+    const whitelistDomains = ['ann1337.github.io'];
     
     if (!whitelistDomains.includes(hostname) && !hasDismissed) {
       console.log(`[Domain Check] Condition met. Showing popup. | 检测到访问域名不是白名单域名，未被用户关闭.`);

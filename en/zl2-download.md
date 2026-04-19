@@ -2,11 +2,11 @@
 sidebar: false
 ---
 
-# Download ZalithLauncher2
+# Download HirokuLauncher 2
 
 ## Official Download Channels
 
-You can download the latest version of ZalithLauncher2 from our GitHub Releases page.
+You can download the latest version of HirokuLauncher 2 from our GitHub Releases page.
 
 <div class="download-container">
   <a href="https://github.com/ZalithLauncher/ZalithLauncher2/releases" class="download-button">
@@ -15,9 +15,9 @@ You can download the latest version of ZalithLauncher2 from our GitHub Releases 
   </a>
 </div>
 
-## About ZalithLauncher2
+## About HirokuLauncher 2
 
-ZalithLauncher2 is the next generation of Zalith Launcher, bringing enhanced features and improvements:
+HirokuLauncher 2 is the next generation of our launcher, bringing enhanced features and improvements:
 
 - 🎮 **Modern Interface Design** - Brand new user interface with modern aesthetics
 - 📦 **Enhanced Mod Management** - Support for modpack download and automatic installation
@@ -28,7 +28,7 @@ ZalithLauncher2 is the next generation of Zalith Launcher, bringing enhanced fea
 
 ## Important Notes
 
-- ZalithLauncher2 is currently in Alpha testing phase
+- HirokuLauncher 2 is currently in Alpha testing phase
 - No domestic acceleration sources are available at this time, please download directly from GitHub
 - If you encounter any issues, please report them in GitHub Issues
 

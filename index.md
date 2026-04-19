@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Zalith Launcher"
-  text: "在 Android 设备上运行 Minecraft Java 版"
-  tagline: 更好的界面，更多实用功能，更低的使用门槛
+  name: "HirokuLauncher"
+  text: "在 Android 上畅玩 Minecraft Java 版"
+  tagline: 现代化界面、极速下载与更稳定的移动端 Java 体验
   image:
     src: /zl_token.png
     alt: Logo
@@ -17,19 +17,19 @@ hero:
       text: 查看文档
       link: /docs/projects/zl2
 features:
-  - icon: 🎮
-    title: 更好的用户体验
-    details: 重新设计的应用界面，添加更多实用功能，降低使用门槛，让更多人能够轻松享受 Minecraft
-  - icon: 🔄
-    title: 更好的版本管理
-    details: 更好的版本管理，支持版本隔离，允许在外部存储目录中设置
-  - icon: 🛠️
-    title: 更多渲染器支持
-    details: 添加更多渲染器，支持渲染器插件
-  - icon: 📁
-    title: 内容管理器
-    details: 支持对游戏版本的游戏资源进行管理
+  - icon: ⚡
+    title: 流畅启动体验
+    details: 针对移动端优化启动流程，减少等待时间，进入游戏更快更稳。
+  - icon: 🧩
+    title: 资源一站式管理
+    details: 模组、整合包、资源包与版本信息集中管理，下载与维护更省心。
+  - icon: 🎛️
+    title: 深度可定制
+    details: 支持版本隔离、参数调整与多项个性化设置，适配不同设备与习惯。
+  - icon: 🌍
+    title: 多源下载支持
+    details: 提供多下载源与智能选择策略，国内外网络环境都能更顺畅获取资源。
 ---
 
 ### 法律声明
-“Minecraft”及“我的世界”是 _Microsoft Corporation_ 和 _Mojang Synergies AB_ 的注册商标。ZalithLauncher 与 Microsoft、Mojang 或网易公司无任何从属或合作关系。
+“Minecraft”及“我的世界”是 _Microsoft Corporation_ 和 _Mojang Synergies AB_ 的注册商标。HirokuLauncher 与 Microsoft、Mojang 或网易公司无任何从属或合作关系。

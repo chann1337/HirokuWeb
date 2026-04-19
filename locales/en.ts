@@ -49,8 +49,8 @@ export default <DefaultTheme.Config> {
         { text: 'Home', link: '/en/' },
         { text: 'Download',
             items: [
-                { text: 'Zalith Launcher 1', link: '/en/download' },
-                { text: 'Zalith Launcher 2', link: '/en/zl2-download' }
+                { text: 'HirokuLauncher 1', link: '/en/download' },
+                { text: 'HirokuLauncher 2', link: '/en/zl2-download' }
             ]
         },
         { text: 'Announcement', link: '/en/docs/announcement/discord-shutdown' },
@@ -73,8 +73,8 @@ export default <DefaultTheme.Config> {
         {
             text: 'Projects',
             items: [
-                { text: 'Zalith Launcher 1', link: '/en/docs/projects/zl1' },
-                { text: 'Zalith Launcher 2', link: '/en/docs/projects/zl2' }
+                { text: 'HirokuLauncher 1', link: '/en/docs/projects/zl1' },
+                { text: 'HirokuLauncher 2', link: '/en/docs/projects/zl2' }
             ]
         },
         {
@@ -111,14 +111,14 @@ export default <DefaultTheme.Config> {
     outlineTitle: 'On this page',
     domainWarning: {
         title: 'Access Notice',
-        content: 'We detected that you are accessing from <strong>{{ currentHostname }}</strong>. For faster website access speed and better stability, we strongly recommend you visit our EdgeOne CDN node:',
+        content: 'You are visiting from <strong>{{ currentHostname }}</strong>. For better speed and stability, we recommend opening the main HirokuLauncher site:',
         button: 'I understand',
-        officialDomain: 'www.zalithlauncher.cn'
+        officialDomain: 'ann1337.github.io'
     },
 
     footer: {
         message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">新ICP备2024015133号-4</a>',
-        copyright: 'Copyright © 2025 Zalith Launcher, All rights reserved. | MIT License'
+        copyright: 'Copyright © 2026 HirokuLauncher, All rights reserved. | MIT License'
     },
 
     notFound: {

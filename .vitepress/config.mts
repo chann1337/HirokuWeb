@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Zalith Launcher",
-  description: '在 Android 设备上游玩 Minecraft: Java Edition',
+  title: "HirokuLauncher",
+  description: 'HirokuLauncher - 在 Android 设备上畅玩 Minecraft: Java Edition',
   srcExclude: ['official-website/**'],
   lastUpdated: true,
   locales: {
@@ -11,11 +11,11 @@ export default defineConfig({
     en: {label: 'English'},
   },
   sitemap: {
-    hostname: 'https://zalithlauncher.cn'
+    hostname: 'https://ann1337.github.io'
   },
   head: [
     ['link', { rel: 'icon', href: '/zl_icon.webp' }],
-    ['meta', { name: 'keywords', content: "zl,zl2,zalith,zalithlauncher,minecraft,mc,zl官网,zl下载,zl启动器"}]
+    ['meta', { name: 'keywords', content: "hiroku,hirokulauncher,minecraft,java,android,启动器"}]
   ],
   themeConfig: {
     notFound: {

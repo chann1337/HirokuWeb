@@ -3,26 +3,26 @@
 
     /* 首页下滑后导航透明 */
     .VPNavBar:not(.has-sidebar):not(.home.top) {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: color-mix(in srgb, var(--vp-c-bg) 72%, transparent);
         backdrop-filter: blur(10px);
     }
 
     /* 搜索框透明 */
     .DocSearch-Button {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: color-mix(in srgb, var(--vp-c-bg) 68%, transparent);
         backdrop-filter: blur(10px);
     }
 
     /* Feature透明 */
     .VPFeature {
-        border: none;
-        box-shadow: 0 10px 30px 0 rgb(0 0 0 / 15%);
-        background-color: transparent;
+        border: 1px solid color-mix(in srgb, var(--vp-c-divider) 65%, transparent);
+        box-shadow: 0 10px 30px 0 color-mix(in srgb, var(--vp-c-brand-1) 10%, transparent);
+        background-color: color-mix(in srgb, var(--vp-c-bg-elv) 78%, transparent);
     }
 
     /* 文档页侧边栏顶部透明 */
     .curtain {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: color-mix(in srgb, var(--vp-c-bg) 74%, transparent);
         backdrop-filter: blur(10px);
     }
 
@@ -30,14 +30,14 @@
 
         /* 文档页导航中间透明 */
         .VPNavBar:not(.home.top) .content-body {
-            background-color: rgba(255, 255, 255, 0);
+            background-color: color-mix(in srgb, var(--vp-c-bg) 70%, transparent);
             backdrop-filter: blur(10px);
         }
     }
 
     /* 移动端大纲栏透明 */
     .VPLocalNav {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: color-mix(in srgb, var(--vp-c-bg) 75%, transparent);
         backdrop-filter: blur(10px);
     }
 
